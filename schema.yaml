@@ -1,0 +1,104 @@
+title: "Oracle Foundry - One-Click PaaS Deployment"
+description: "Deploy a complete self-hosted Platform-as-a-Service (PaaS) with CORS proxy on Oracle Cloud Always Free tier. No terminal or technical knowledge required!"
+schemaVersion: 1.1.0
+version: "1.0.0"
+
+locale: "en"
+
+variableGroups:
+  - title: "Required Configuration"
+    visible: true
+    variables:
+      - compartment_ocid
+      - region
+      - ssh_public_key
+
+  - title: "Instance Configuration (Optional - Defaults are optimal)"
+    visible: false
+    variables:
+      - instance_shape
+      - instance_ocpus
+      - instance_memory_in_gbs
+      - boot_volume_size_in_gbs
+
+variables:
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    required: true
+    title: "Compartment"
+    description: "Select the compartment where your Foundry will be deployed (use root compartment if unsure)"
+
+  region:
+    type: oci:identity:region:name
+    required: true
+    title: "Region"
+    description: "Select your Oracle Cloud region (choose one closest to you for best performance)"
+
+  ssh_public_key:
+    type: oci:core:ssh:publickey
+    required: true
+    title: "SSH Public Key"
+    description: "Paste your SSH public key here (for emergency access only - not needed for daily use)"
+    additionalProps:
+      allowMultiple: false
+
+  instance_shape:
+    type: enum
+    enum:
+      - "VM.Standard.A1.Flex"
+    required: true
+    default: "VM.Standard.A1.Flex"
+    title: "Instance Shape"
+    description: "ARM-based shape (Always Free eligible)"
+
+  instance_ocpus:
+    type: integer
+    minimum: 1
+    maximum: 4
+    default: 4
+    required: true
+    title: "Number of CPU Cores"
+    description: "4 cores is the Always Free maximum"
+
+  instance_memory_in_gbs:
+    type: integer
+    minimum: 6
+    maximum: 24
+    default: 24
+    required: true
+    title: "Memory (GB)"
+    description: "24GB is the Always Free maximum"
+
+  boot_volume_size_in_gbs:
+    type: integer
+    minimum: 50
+    maximum: 200
+    default: 100
+    required: true
+    title: "Boot Disk Size (GB)"
+    description: "100GB is recommended (up to 200GB free)"
+
+outputs:
+  foundry_public_ip:
+    type: string
+    title: "Your Server IP Address"
+
+  dokploy_dashboard:
+    type: link
+    title: "Dokploy Dashboard (click to open)"
+
+  fastcors_proxy:
+    type: link
+    title: "FastCORS Proxy (click to open)"
+
+  setup_instructions:
+    type: string
+    title: "Setup Instructions"
+
+outputGroups:
+  - title: "Access Your Foundry"
+    outputs:
+      - foundry_public_ip
+      - dokploy_dashboard
+      - fastcors_proxy
+      - setup_instructions
