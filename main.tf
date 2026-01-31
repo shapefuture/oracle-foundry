@@ -28,7 +28,8 @@ variable "compartment_ocid" {
 }
 
 variable "region" {
-  description = "Oracle Cloud region"
+  description = "Oracle Cloud region (US Ashburn for arm availability)"
+  default = "us-east4"
 }
 
 variable "ssh_public_key" {
