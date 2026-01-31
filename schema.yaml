@@ -31,8 +31,9 @@ variables:
   region:
     type: oci:identity:region:name
     required: true
+    default: "us-east4"
     title: "Region"
-    description: "Select your Oracle Cloud region (choose one closest to you for best performance)"
+    description: "Select your Oracle Cloud region (US for arm availability)"
 
   ssh_public_key:
     type: oci:core:ssh:publickey
