@@ -119,7 +119,7 @@ When it's ready, you'll see the Oracle Cloud homepage with a dashboard.
 
 Click this button:
 
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/YOUR_GITHUB_USER/oracle-foundry/archive/refs/heads/main.zip)
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/shapefuture/oracle-foundry/archive/refs/heads/main.zip)
 
 **What this does:** Opens Oracle Cloud and automatically loads all the setup instructions for your Foundry.
 
