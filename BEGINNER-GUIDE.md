@@ -25,10 +25,10 @@ In about 15 minutes, you'll have your own **personal Heroku/Vercel** that:
 
 1. **An email address** (Gmail, Outlook, anything works)
 2. **A phone number** (for verification)
-3. **A credit/debit card** (Oracle won't charge you - it's just for identity verification)
+3. **A credit/debit card** (Oracle won't charge you - it's just $1 for identity verification)
 4. **15 minutes of your time**
 
-**⚠️ IMPORTANT: Oracle will ask for a credit card but will NEVER charge you for the Always Free resources. This has been free since 2019 and Oracle has committed to keeping it free forever.**
+**⚠️ IMPORTANT: Oracle will ask for a credit card but will NEVER charge you, just $1 for authorization. This has been free since 2019 and Oracle has committed to keeping it free forever.**
 
 ---
 
@@ -52,10 +52,6 @@ You'll see a form asking for:
 - **First Name** and **Last Name**: Your real name
 - **Email**: Use an email you can access (they'll send a verification)
 
-**Company Information** (don't worry, just fill it out):
-- **Company Name**: If you don't have a company, just put your name
-- **Cloud Account Name**: This will be part of your login. Choose something you'll remember (like "myfoundry" or your first name)
-
 Click **"Verify my email"**
 
 ---
@@ -74,6 +70,10 @@ After clicking the verification link, you'll create a password:
 
 - **Password**: Make it strong (mix of letters, numbers, symbols)
 - **Confirm Password**: Type it again
+
+- **Company/Idividual*: Select Individual for simpler verification
+- **Cloud Account Name**: This will be part of your login. Choose something you'll remember (like "myfoundry" or your first name)
+- **Home Server**: Choose US East for greater availability
 
 Click **"Continue"**
 
